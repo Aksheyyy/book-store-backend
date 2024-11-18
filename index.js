@@ -8,10 +8,7 @@ require('dotenv').config()
 
 // middleware
 app.use(express.json());
-app.use(cors({
-    origin: ['http://localhost:5173','https://resilient-nougat-f41d58.netlify.app/'],
-    credentials: true
-}))
+app.use(cors())
 
 // routes
 const bookRoutes = require('./src/books/book.route');
